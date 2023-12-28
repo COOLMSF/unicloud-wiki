@@ -1,7 +1,7 @@
 <template lang="pug">
   v-app
     .login(:style='`background-image: url(` + bgUrl + `);`')
-      .login-sd
+      .login-sd(style="height: calc(80vh - 40px); margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;")
         .d-flex.mb-5
           .login-logo
             v-avatar(tile, size='34')
@@ -692,8 +692,8 @@ export default {
 
 <style lang="scss">
   .login {
-    // background-image: url('/_assets/img/splash/1.jpg');
-    background-color: mc('grey', '900');
+    background-image: url('https://www.unicloud.com//upload/images/2022/8/9c634cb90409879a.jpg');
+    background-color: mc('purple', '900');
     background-size: cover;
     background-position: center center;
     width: 100%;
@@ -705,9 +705,18 @@ export default {
       -webkit-backdrop-filter: blur(10px);
       border-left: 1px solid rgba(255,255,255,.85);
       border-right: 1px solid rgba(255,255,255,.85);
+      // width: calc(100vw - 40px);
+      // height: calc(100vh - 40px);
       width: 450px;
-      height: 100%;
-      margin-left: 5vw;
+      height: 10%;
+
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translateY(-50%);
+      // color: green;
+      // background-color: purple;
+      opacity: 0.9;
 
       @at-root .no-backdropfilter & {
         background-color: rgba(255,255,255,.95);
