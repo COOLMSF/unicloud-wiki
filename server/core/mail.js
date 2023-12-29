@@ -62,7 +62,8 @@ module.exports = {
       html: _.get(this.templates, opts.template)({
         logo: (WIKI.config.logoUrl.startsWith('http') ? '' : WIKI.config.host) + WIKI.config.logoUrl,
         siteTitle: WIKI.config.title,
-        copyright: WIKI.config.company.length > 0 ? WIKI.config.company : 'Powered by Wiki.js',
+        // copyright: WIKI.config.company.length > 0 ? WIKI.config.company : 'Powered by Wiki.js',
+        copyright: WIKI.config.company.length > 0 ? WIKI.config.company : '版权所有: ©紫光云技术有限公司 2023 版权所有     津 ICP 备 19004759号-1',
         ...opts.data
       })
     })
