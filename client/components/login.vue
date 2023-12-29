@@ -3,9 +3,13 @@
     .login(:style='`background-image: url(` + bgUrl + `);`')
       .login-sd(style="height: calc(80vh - 40px); margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;")
         .d-flex.mb-5
-          .login-logo
-            v-avatar(tile, size='34')
-              v-img(:src='logoUrl')
+          // .login-logo
+            // v-avatar(tile, size='30', background-color='transparent')
+            // v-avatar(tile, size='34')
+            // v-img(:src='logoUrl1', contain, max-width='1000')
+          .test
+            img(src="https://www.unicloud.com/upload/images/2022/1/d3de17946a411f84.png" style="margin: 0 auto; object-fit: contain")
+
           .login-title
             .text-h6.grey--text.text--darken-4 {{ siteTitle }}
         v-alert.mb-0(
@@ -307,6 +311,15 @@ export default {
       return this.strategies.length > 1
     },
     logoUrl () { return siteConfig.logoUrl },
+    filteredStrategies () {
+      const qParams = new URLSearchParams(window.location.search)
+      if (this.hideLocal && !qParams.has('all')) {
+        return _.reject(this.strategies, ['key', 'local'])
+      } else {
+        return this.strategies
+      }
+    },
+    logoUrl1 () { return "https://www.unicloud.com/upload/images/2022/1/d3de17946a411f84.png" },
     filteredStrategies () {
       const qParams = new URLSearchParams(window.location.search)
       if (this.hideLocal && !qParams.has('all')) {
