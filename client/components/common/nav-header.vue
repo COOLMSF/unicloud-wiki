@@ -21,7 +21,8 @@
       v-flex(xs5, md4)
         v-toolbar.nav-header-inner(color='black', dark, flat, :class='$vuetify.rtl ? `pr-3` : `pl-3`')
           v-avatar(tile, size='34', @click='goHome')
-            v-img.org-logo(:src='logoUrl')
+            // v-img.org-logo(:src='logoUrl')
+            v-img.org-logo(:src='unicloudLogoUrl' contain max-witdth='200' max-width='200')
           //- v-menu(open-on-hover, offset-y, bottom, left, min-width='250', transition='slide-y-transition')
           //-   template(v-slot:activator='{ on }')
           //-     v-app-bar-nav-icon.btn-animate-app(v-on='on', :class='$vuetify.rtl ? `mx-0` : ``')
@@ -299,6 +300,7 @@ export default {
     isLoading: get('isLoading'),
     title: get('site/title'),
     logoUrl: get('site/logoUrl'),
+    unicloudLogoUrl: () => 'https://www.unicloud.com/upload/images/2022/1/d3de17946a411f84.png',
     path: get('page/path'),
     locale: get('page/locale'),
     mode: get('page/mode'),
