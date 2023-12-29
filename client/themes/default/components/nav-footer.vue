@@ -1,12 +1,13 @@
 <template lang="pug">
   v-footer.justify-center(:color='bgColor', inset)
     .caption.grey--text(:class='$vuetify.theme.dark ? `text--lighten-1` : `text--darken-1`')
-      template(v-if='footerOverride')
-        span(v-html='footerOverrideRender + ` |&nbsp;`')
-      template(v-else-if='company && company.length > 0 && contentLicense !== ``')
-        span(v-if='contentLicense === `alr`') {{ $t('common:footer.copyright', { company: company, year: currentYear, interpolation: { escapeValue: false } }) }} |&nbsp;
-        span(v-else) {{ $t('common:footer.license', { company: company, license: $t('common:license.' + contentLicense), interpolation: { escapeValue: false } }) }} |&nbsp;
+      // template(v-if='footerOverride')
+      //   span(v-html='footerOverrideRender + ` |&nbsp;`')
+      // template(v-else-if='company && company.length > 0 && contentLicense !== ``')
+      //   span(v-if='contentLicense === `alr`') {{ $t('common:footer.copyright', { company: company, year: currentYear, interpolation: { escapeValue: false } }) }} |&nbsp;
+      //   span(v-else) {{ $t('common:footer.license', { company: company, license: $t('common:license.' + contentLicense), interpolation: { escapeValue: false } }) }} |&nbsp;
       // span {{ $t('common:footer.poweredBy') }} #[a(href='https://wiki.js.org', ref='nofollow') Wiki.js]
+      span 版权所有: ©紫光云技术有限公司 2023 版权所有     津 ICP 备 19004759号-1 |
       span {{ $t('common:footer.poweredBy') }} #[a(href='https://www.unicloud.com', ref='nofollow') Unicloud]
 </template>
 
