@@ -84,7 +84,7 @@
                             v-btn.ml-2(icon, tile, color='white', v-on='on', @click='copyFromLocaleDialogIsShown = true')
                               v-icon mdi-arrange-send-backward
                           span {{$t('admin:navigation.copyFromLocale')}}
-                      v-list.py-2(dense, nav, dark, class='blue darken-2', style='border-radius: 0;')
+                      v-list.py-2(dense, nav, dark, class='purple accent-2', style='border-radius: 0;')
                         v-list-item(v-if='currentTree.length < 1')
                           v-list-item-avatar(size='24'): v-icon(color='blue lighten-3') mdi-alert
                           v-list-item-content

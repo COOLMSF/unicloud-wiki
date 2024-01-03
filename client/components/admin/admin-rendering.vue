@@ -18,7 +18,7 @@
 
       v-flex.animated.fadeInUp(lg3, xs12)
         v-toolbar(
-          color='blue darken-2'
+          color='purple accent-2'
           dense
           flat
           dark

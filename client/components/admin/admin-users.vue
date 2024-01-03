@@ -53,7 +53,7 @@
             template(slot='item', slot-scope='props')
               tr.is-clickable(:active='props.selected', @click='$router.push("/users/" + props.item.id)')
                 //- td
-                  v-checkbox(hide-details, :input-value='props.selected', color='blue darken-2', @click='props.selected = !props.selected')
+                  v-checkbox(hide-details, :input-value='props.selected', color='purple accent-2', @click='props.selected = !props.selected')
                 td {{ props.item.id }}
                 td: strong {{ props.item.name }}
                 td {{ props.item.email }}

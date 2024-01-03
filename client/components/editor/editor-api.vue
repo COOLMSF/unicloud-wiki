@@ -252,7 +252,7 @@ export default {
           title: 'AWS'
         },
         azure: {
-          color: 'blue darken-2',
+          color: 'purple accent-2',
           icon: 'mdi-azure',
           title: 'Azure'
         },
@@ -272,7 +272,7 @@ export default {
           title: 'Google'
         },
         kubernetes: {
-          color: 'blue darken-2',
+          color: 'purple accent-2',
           icon: 'mdi-kubernetes',
           title: 'Kubernetes'
         },
@@ -292,7 +292,7 @@ export default {
           title: 'Server'
         },
         windows: {
-          color: 'blue darken-2',
+          color: 'purple accent-2',
           icon: 'mdi-windows',
           title: 'Windows'
         }

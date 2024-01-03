@@ -51,7 +51,7 @@
               flat
               prepend-inner-icon='mdi-clipboard-account'
               background-color='white'
-              color='blue darken-2'
+              color='purple accent-2'
               hide-details
               ref='iptEmail'
               v-model='username'
@@ -65,7 +65,7 @@
               flat
               prepend-inner-icon='mdi-form-textbox-password'
               background-color='white'
-              color='blue darken-2'
+              color='purple accent-2'
               hide-details
               ref='iptPassword'
               v-model='password'
@@ -80,7 +80,7 @@
             v-btn.mt-2.text-none(
               width='100%'
               large
-              color='blue darken-2'
+              color='purple accent-2'
               dark
               @click='login'
               :loading='isLoading'
@@ -113,7 +113,7 @@
               flat
               prepend-inner-icon='mdi-clipboard-account'
               background-color='white'
-              color='blue darken-2'
+              color='purple accent-2'
               hide-details
               ref='iptForgotPwdEmail'
               v-model='username'
@@ -125,7 +125,7 @@
             v-btn.mt-2.text-none(
               width='100%'
               large
-              color='blue darken-2'
+              color='purple accent-2'
               dark
               @click='forgotPasswordSubmit'
               :loading='isLoading'
@@ -151,7 +151,7 @@
               flat
               prepend-inner-icon='mdi-form-textbox-password'
               background-color='white'
-              color='blue darken-2'
+              color='purple accent-2'
               hide-details
               ref='iptNewPassword'
               v-model='newPassword'
@@ -166,7 +166,7 @@
               flat
               prepend-inner-icon='mdi-form-textbox-password'
               background-color='white'
-              color='blue darken-2'
+              color='purple accent-2'
               hide-details
               v-model='newPasswordVerify'
               :placeholder='$t(`auth:changePwd.newPasswordVerifyPlaceholder`)'
@@ -177,7 +177,7 @@
             v-btn.mt-2.text-none(
               width='100%'
               large
-              color='blue darken-2'
+              color='purple accent-2'
               dark
               @click='changePassword'
               :loading='isLoading'
@@ -195,7 +195,7 @@
             solo
             flat
             background-color='white'
-            color='blue darken-2'
+            color='purple accent-2'
             hide-details
             ref='iptTFA'
             v-model='securityCode'
@@ -207,7 +207,7 @@
           v-btn.mt-2.text-none(
             width='100%'
             large
-            color='blue darken-2'
+            color='purple accent-2'
             dark
             @click='verifySecurityCode(false)'
             :loading='isLoading'
@@ -229,7 +229,7 @@
             solo
             flat
             background-color='white'
-            color='blue darken-2'
+            color='purple accent-2'
             hide-details
             ref='iptTFASetup'
             v-model='securityCode'
@@ -241,7 +241,7 @@
           v-btn.mt-2.text-none(
             width='100%'
             large
-            color='blue darken-2'
+            color='purple accent-2'
             dark
             @click='verifySecurityCode(true)'
             :loading='isLoading'
