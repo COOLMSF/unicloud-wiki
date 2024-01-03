@@ -38,6 +38,7 @@ server/views/setup.pug
 *.sqlite
 
 # IDE exclude
+**/.vscode/*
 .idea
 *.sublime-*
 
