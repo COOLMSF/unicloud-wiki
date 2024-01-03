@@ -77,6 +77,7 @@
               @keyup.enter='login'
               light
             )
+
             v-btn.mt-2.text-none(
               width='100%'
               large
@@ -85,6 +86,8 @@
               @click='login'
               :loading='isLoading'
               ) {{ $t('auth:actions.login') }}
+
+            // 忘记密码
             .text-center.mt-5
               v-btn.text-none(
                 text
@@ -93,6 +96,17 @@
                 @click.stop.prevent='forgotPassword'
                 href='#forgot'
                 ): .caption {{ $t('auth:forgotPasswordLink') }}
+
+            // 游客登录
+            .text-center.mt-5
+              v-btn.text-none(
+                text
+                rounded
+                color='grey darken-3'
+                @click.stop.prevent='guestLogin'
+                href='#forgot'
+                ): .caption {{ $t('auth:游客访问') }}
+
               v-btn.text-none(
                 v-if='selectedStrategyKey === `local` && selectedStrategy.selfRegistration'
                 color='indigo darken-2'
@@ -100,6 +114,7 @@
                 rounded
                 href='/register'
                 ): .caption {{ $t('auth:switchToRegister.link') }}
+
         //-------------------------------------------------
         //- FORGOT PASSWORD FORM
         //-------------------------------------------------
@@ -138,6 +153,9 @@
                 @click.stop.prevent='screen = `login`'
                 href='#forgot'
                 ): .caption {{ $t('auth:forgotPasswordCancel') }}
+
+
+
         //-------------------------------------------------
         //- CHANGE PASSWORD FORM
         //-------------------------------------------------
