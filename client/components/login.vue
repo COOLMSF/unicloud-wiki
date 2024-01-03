@@ -105,7 +105,7 @@
                 color='grey darken-3'
                 @click.stop.prevent='guestLogin'
                 href='#forgot'
-                ): .caption {{ $t('auth:游客访问') }}
+                ): .caption {{ $t('auth:游客访问?') }}
 
               v-btn.text-none(
                 v-if='selectedStrategyKey === `local` && selectedStrategy.selfRegistration'
@@ -590,6 +590,17 @@ export default {
         this.$refs.iptForgotPwdEmail.focus()
       })
     },
+    // 游客自动使用公网账号登录
+    guestLogin() {
+      // 填充账密
+      this.username = 'public@outlook.com';
+      this.password = 'HsL1357924680';
+
+      // 登录
+      this.login();
+    },
+
+
     /**
      * FORGOT PASSWORD SUBMIT
      */
