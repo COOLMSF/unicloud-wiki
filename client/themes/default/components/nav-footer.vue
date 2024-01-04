@@ -10,7 +10,7 @@
       span 版权所有: ©紫光云技术有限公司 2023 版权所有     津 ICP 备 19004759号-1 
       img(src="https://www.unicloud.com/upload/images/2020/12/56b7b7d3b104eb04.png")
       span 津公网安备 12019202000336号 | 
-      span {{ $t('common:footer.poweredBy') }} #[a(href='https://www.unicloud.com', ref='nofollow') Unicloud]
+      span(style='color: purple;') {{ $t('common:footer.poweredBy') }} #[a(href='https://www.unicloud.com', ref='nofollow') Unicloud]
 </template>
 
 <script>
