@@ -42,7 +42,7 @@ router.get('/login', async (req, res, next) => {
       }
     }
     // -> Show Login
-    const bgUrl = !_.isEmpty(WIKI.config.auth.loginBgUrl) ? WIKI.config.auth.loginBgUrl : 'https://www.unicloud.com//upload/images/2022/8/9c634cb90409879a.jpg'
+    const bgUrl = !_.isEmpty(WIKI.config.auth.loginBgUrl) ? WIKI.config.auth.loginBgUrl : 'https://www.unicloud.com/console/static/img/h_bg.4bebe7d1.jpg'
     res.render('login', { bgUrl, hideLocal: WIKI.config.auth.hideLocal })
   }
 })
