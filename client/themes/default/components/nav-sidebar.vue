@@ -43,29 +43,68 @@
           v-list-item-title {{ item.l }}
         v-divider.my-2(v-else-if='item.k === `divider`')
         v-subheader.pl-4(v-else-if='item.k === `header`') {{ item.l }}
-    //-> Browse
+    // 导航栏内容，默认模式
     v-list.py-2(v-else-if='currentMode === `browse`', dense, :class='color', :dark='dark')
       template(v-if='currentParent.id > 0')
         v-list-item(v-for='(item, idx) of parents', :key='`parent-` + item.id', @click='fetchBrowseItems(item)', style='min-height: 30px;')
           v-list-item-avatar(size='18', :style='`padding-left: ` + (idx * 8) + `px; width: auto; margin: 0 5px 0 0;`')
             v-icon(small) mdi-folder-open
           v-list-item-title {{ item.title }}
-        v-divider.mt-2
+        // v-divider.mt-2
         v-list-item.mt-2(v-if='currentParent.pageId > 0', :href='`/` + currentParent.locale + `/` + currentParent.path', :key='`directorypage-` + currentParent.id', :input-value='path === currentParent.path')
           v-list-item-avatar(size='24')
             v-icon mdi-text-box
           v-list-item-title {{ currentParent.title }}
         v-subheader.pl-4 {{$t('common:sidebar.currentDirectory')}}
       template(v-for='item of currentItems')
+        // 当前目录
         v-list-item(v-if='item.isFolder', :key='`childfolder-` + item.id', @click='fetchBrowseItems(item)')
           v-list-item-avatar(size='24')
             v-icon mdi-folder
           v-list-item-title {{ item.title }}
+
+        // 当前目录的页面
         v-list-item(v-else, :href='`/` + item.locale + `/` + item.path', :key='`childpage-` + item.id', :input-value='path === item.path')
           v-list-item-avatar(size='24')
             v-icon mdi-text-box
           v-list-item-title {{ item.title }}
 </template>
+
+<style>
+  .v-subheader {
+    color: white !important;
+    background-color: purple !important;
+  }
+
+  /* 导航栏列表颜色 */
+  .__view {
+    color: purple !important;
+    background-color: purple!important;
+  }
+  .v-list{
+    color: white!important;;
+    border-block-color: purple!important;
+    background-color: purple !important;
+  }
+  /* 消除导航栏primary的背景, 否则会有蓝色边框*/
+  .v-list.primary {
+    background-color: transparent !important;
+  }
+
+  /*
+  // 这部分代码控制的是 标签 和 最后编辑 这两个模块的背景
+  .v-sheet {
+    color: white!important;
+    background-color: purple!important;
+  }
+
+  .v-list--dense {
+    background-color: purple!important;;
+  }
+  */
+
+
+</style>
 
 <script>
 import _ from 'lodash'
@@ -236,3 +275,4 @@ export default {
   }
 }
 </script>
+
