@@ -1,7 +1,7 @@
 <template lang="pug">
   v-app
     .login(:style='`background-image: url(` + bgUrl + `);`')
-      .login-sd(style="height: calc(80vh - 40px); margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;")
+    .login-sd(style="height: calc(80vh - 40px); margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;")
         .d-flex.mb-5
           // .login-logo
             // v-avatar(tile, size='30', background-color='transparent')
@@ -734,7 +734,7 @@ export default {
 
 <style lang="scss">
   .login {
-    background-image: url('https://www.unicloud.com//upload/images/2022/8/9c634cb90409879a.jpg');
+    background-image: url('https://www.unicloud.com/console/static/img/h_bg.4bebe7d1.jpg');
     background-color: mc('purple', '900');
     background-size: cover;
     background-position: center center;
@@ -841,4 +841,9 @@ export default {
       }
     }
   }
+
+.login-sd {
+  position: absolute;
+  left: calc(2/3 * 100vw);
+}
 </style>
