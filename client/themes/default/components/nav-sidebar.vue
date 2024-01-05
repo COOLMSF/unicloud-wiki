@@ -84,8 +84,12 @@
   .v-list{
     color: white!important;;
     border-block-color: purple!important;
+    /* 所有列表渲染
     background-color: purple !important;
+    */
   }
+
+
   /* 消除导航栏primary的背景, 否则会有蓝色边框*/
   .v-list.primary {
     background-color: transparent !important;
