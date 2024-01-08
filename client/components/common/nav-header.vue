@@ -46,6 +46,17 @@
           //-         v-list-item-subtitle.overline.grey--text.text--lighten-2 Coming soon
           v-toolbar-title(:class='{ "mx-3": $vuetify.breakpoint.mdAndUp, "mx-1": $vuetify.breakpoint.smAndDown }')
             span.subheading {{title}}
+          v-toolbar-title(:class="{ 'mx-3': $vuetify.breakpoint.mdAndUp, 'mx-1': $vuetify.breakpoint.smAndDown }")
+
+          v-spacer
+          li.layui-nav-item#dis_3
+            div.second_nav(style="right: 0; display: flex; justify-content: flex-end;")
+              v-btn.small(href="https://www.unicloud.com") 官网
+              v-btn.small(href="https://www.baidu.com") 紫谷社区
+              v-btn.small(href="http://111.161.66.93:8501") 智能AI
+              v-btn.small(href="https://coolmsf.github.io") 资料库
+              v-btn.small(href="https://www.bilibili.com") FAQ
+
       v-flex(md4, v-if='$vuetify.breakpoint.mdAndUp')
         v-toolbar.nav-header-inner(color='black', dark, flat)
           slot(name='mid')
