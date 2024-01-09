@@ -51,7 +51,7 @@
           li.layui-nav-item#dis_3
             div.second_nav(style="right: 0; display: flex; justify-content: flex-end;")
               v-btn.small(href="https://www.unicloud.com") 官网
-              v-btn.small(href="https://www.baidu.com") 快问快答
+              v-btn.small(href="http://127.0.0.1:9080") 快问快答
               v-btn.small(href="http://111.161.66.93:8501") 智能AI
               v-btn.small(href="https://www.unicloud.com/document/index.html") 资料库
               v-btn.small(href="https://www.bilibili.com") FAQ
