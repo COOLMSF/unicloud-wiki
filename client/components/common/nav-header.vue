@@ -48,14 +48,15 @@
             span.subheading {{title}}
           v-toolbar-title(:class="{ 'mx-3': $vuetify.breakpoint.mdAndUp, 'mx-1': $vuetify.breakpoint.smAndDown }")
 
-          v-spacer
           li.layui-nav-item#dis_3
             div.second_nav(style="right: 0; display: flex; justify-content: flex-end;")
               v-btn.small(href="https://www.unicloud.com") 官网
-              v-btn.small(href="https://www.baidu.com") 紫谷社区
+              v-btn.small(href="https://www.baidu.com") 快问快答
               v-btn.small(href="http://111.161.66.93:8501") 智能AI
-              v-btn.small(href="https://coolmsf.github.io") 资料库
+              v-btn.small(href="https://www.unicloud.com/document/index.html") 资料库
               v-btn.small(href="https://www.bilibili.com") FAQ
+          block content
+            navmenu(items=menuItems)
 
       v-flex(md4, v-if='$vuetify.breakpoint.mdAndUp')
         v-toolbar.nav-header-inner(color='black', dark, flat)
@@ -261,6 +262,8 @@
         .overline This code base is NOT for production use!
 </template>
 
+
+
 <script>
 import { get, sync } from 'vuex-pathify'
 import _ from 'lodash'
@@ -268,7 +271,6 @@ import _ from 'lodash'
 import movePageMutation from 'gql/common/common-pages-mutation-move.gql'
 
 /* global siteConfig, siteLangs */
-
 export default {
   components: {
     PageDelete: () => import('./page-delete.vue'),
@@ -300,6 +302,21 @@ export default {
         path: 'new-page',
         modal: false
       }
+      ,
+      menuItems: [
+          {
+            label: '首页',
+            to: '/'
+          },
+          {
+            label: '关于我们',
+            to: '/about'
+          },
+          {
+            label: '联系我们',
+            to: '/contact'
+          }
+        ]
     }
   },
   computed: {
@@ -493,7 +510,9 @@ export default {
     }
   }
 }
+
 </script>
+
 
 <style lang='scss'>
 
