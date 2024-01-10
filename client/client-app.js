@@ -141,6 +141,7 @@ Vue.use(helpers)
 Vue.use(Vuetify)
 Vue.use(VueMoment, { moment })
 Vue.use(Vuescroll)
+Vue.use(ElementUI)
 
 Vue.prototype.Velocity = Velocity
 
