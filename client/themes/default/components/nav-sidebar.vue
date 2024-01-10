@@ -79,7 +79,7 @@
   /* 导航栏列表颜色 */
   .__view {
     color: purple !important;
-    background-color: purple!important;
+    background-color: rgb(255, 255, 255)!important;
   }
   .v-list{
     color: white!important;;
@@ -87,6 +87,21 @@
     /* 所有列表渲染
     background-color: purple !important;
     */
+  }
+
+  .v-list-item__avater {
+    color: purple !important;
+    background-color: rgb(15, 11, 15)!important;
+  }
+
+  .v-icon {
+    color: purple !important;
+    background-color: rgb(255, 255, 255)!important;
+  }
+
+  .v-list-item__title {
+    color: rgb(1, 1, 1) !important;
+    background-color: rgb(255, 254, 255)!important;
   }
 
 
