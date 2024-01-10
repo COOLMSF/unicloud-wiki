@@ -45,10 +45,6 @@
           //-       v-list-item-content
           //-         v-list-item-title.body-2.grey--text.text--ligten-2 {{$t('common:header.imagesFiles')}}
           //-         v-list-item-subtitle.overline.grey--text.text--lighten-2 Coming soon
-          v-toolbar-title(:class='{ "mx-3": $vuetify.breakpoint.mdAndUp, "mx-1": $vuetify.breakpoint.smAndDown }')
-            span.subheading {{title}}
-          v-toolbar-title(:class="{ 'mx-3': $vuetify.breakpoint.mdAndUp, 'mx-1': $vuetify.breakpoint.smAndDown }")
-
 
           el-menu(
             :default-active="activeIndex"
@@ -622,8 +618,20 @@ span.subheading {
 }
 
 .el-menu-demo {
-  color: #000000;
+  color: #000000 !important;
   font-weight: bold;
+}
+
+//- 社区名称
+.el-submenu__title {
+  color: purple !important;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.el-menu-item {
+  color: blank !important;
+  font-size: 20px;
 }
 
 .org-logo {
@@ -635,5 +643,6 @@ span.subheading {
 .v-input__slot {
   background-color: #2576D1 !important;
 }
+
 
 </style>
