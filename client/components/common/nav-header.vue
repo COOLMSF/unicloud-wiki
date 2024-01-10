@@ -48,15 +48,29 @@
             span.subheading {{title}}
           v-toolbar-title(:class="{ 'mx-3': $vuetify.breakpoint.mdAndUp, 'mx-1': $vuetify.breakpoint.smAndDown }")
 
-          li.layui-nav-item#dis_3
-            div.second_nav(style="right: 0; display: flex; justify-content: flex-end;")
-              v-btn.small(href="https://www.unicloud.com") 官网
-              v-btn.small(href="http://127.0.0.1:9080") 快问快答
-              v-btn.small(href="http://111.161.66.93:8501") 智能AI
-              v-btn.small(href="https://www.unicloud.com/document/index.html") 资料库
-              v-btn.small(href="https://www.bilibili.com") FAQ
-          block content
-            navmenu(items=menuItems)
+
+          el-menu(
+            :default-active="activeIndex"
+            class="el-menu-demo"
+            mode="horizontal"
+            @select="handleSelect"
+          )
+            el-submenu(index="2")
+              template(slot="title") 紫谷社区
+              el-menu-item(index="2-1") 快问快答
+              el-menu-item(index="2-2") 服务支持中心
+              el-menu-item(index="2-3") 智能AI
+
+          div.line
+
+
+          //- li.layui-nav-item#dis_3
+          //-   div.second_nav(style="right: 0; display: flex; justify-content: flex-end;")
+          //-     v-btn.small(href="https://www.unicloud.com") 官网
+          //-     v-btn.small(href="http://127.0.0.1:9080") 快问快答
+          //-     v-btn.small(href="http://111.161.66.93:8501") 智能AI
+          //-     v-btn.small(href="https://www.unicloud.com/document/index.html") 资料库
+          //-     v-btn.small(href="https://www.bilibili.com") FAQ
 
       v-flex(md4, v-if='$vuetify.breakpoint.mdAndUp')
         v-toolbar.nav-header-inner(color='black', dark, flat)
