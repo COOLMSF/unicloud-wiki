@@ -631,21 +631,9 @@ span.subheading {
   height: 200px;
 }
 
-//- not work
+//- 搜索框颜色
 .v-input__slot {
-  background-color: #5b4cb0;
+  background-color: #2576D1 !important;
 }
-
-.el-menu{
-  color: #8c6aff !important;
-  font-size: 18px !important;
-}
-
-.el-submenu__title {
-  color: #8c6aff;
-  font-size: 18px;
-}
-
-
 
 </style>
