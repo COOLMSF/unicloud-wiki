@@ -44,8 +44,6 @@
         //- LOGIN FORM
         //-------------------------------------------------
         template(v-if='screen === `login` && selectedStrategy.strategy.useForm')
-          .login-subtitle
-            .text-subtitle-1 {{$t('auth:enterCredentials')}}
           .login-form
             v-text-field(
               solo
