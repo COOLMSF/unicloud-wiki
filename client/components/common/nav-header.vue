@@ -520,6 +520,21 @@ export default {
     },
     goHome () {
       window.location.assign('/')
+    },
+    handleSelect(index) {
+      switch (index) {
+        case '2-1':
+          window.location.href = 'https://www.baidu.com/';
+          break;
+        case '2-2':
+          window.location.href = 'https://www.bing.com/';
+          break;
+        case '2-3':
+          window.location.href = 'https://www.unicloud.com/';
+          break;
+        default:
+          break;
+      }
     }
   }
 }
