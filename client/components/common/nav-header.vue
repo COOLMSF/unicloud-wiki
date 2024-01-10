@@ -19,6 +19,7 @@
       )
     v-layout(row)
       v-flex(xs5, md4)
+        //- 左上角部分
         v-toolbar.nav-header-inner(color='white', dark, flat, :class='$vuetify.rtl ? `pr-3` : `pl-3`')
           v-avatar(tile, size='80', @click='goHome')
             // v-img.org-logo(:src='logoUrl')
@@ -72,8 +73,10 @@
           //-     v-btn.small(href="https://www.bilibili.com") FAQ
 
       v-flex(md4, v-if='$vuetify.breakpoint.mdAndUp')
-        v-toolbar.nav-header-inner(color='black', dark, flat)
+        //- 正上方部分
+        v-toolbar.nav-header-inner(color='white', dark, flat)
           slot(name='mid')
+            //- 搜索框
             transition(name='navHeaderSearch', v-if='searchIsShown')
               v-text-field(
                 ref='searchField',
@@ -96,13 +99,14 @@
                 @keyup.up='searchMove(`up`)'
                 autocomplete='none'
               )
+            //- 分类标签
             v-tooltip(bottom)
               template(v-slot:activator='{ on }')
                 v-btn.ml-2.mr-0(icon, v-on='on', href='/t', :aria-label='$t(`common:header.browseTags`)')
                   v-icon(color='grey') mdi-tag-multiple
               span {{$t('common:header.browseTags')}}
       v-flex(xs7, md4)
-        v-toolbar.nav-header-inner.pr-4(color='black', dark, flat)
+        v-toolbar.nav-header-inner.pr-4(color='white', dark, flat)
           v-spacer
           .navHeaderLoading.mr-3
             v-progress-circular(indeterminate, color='blue', :size='22', :width='2' v-show='isLoading')
@@ -526,22 +530,7 @@ export default {
 
 </script>
 
-
 <style lang='scss'>
-
-span.subheading {
-  color: #000000;
-}
-
-.el-menu-demo {
-  color: #000000;
-  font-weight: bold;
-}
-
-.org-logo {
-  width: 200px;
-  height: 200px;
-}
 
 .nav-header {
   //z-index: 1000;
@@ -627,5 +616,36 @@ span.subheading {
 .navHeaderLoading { // To avoid search bar jumping
   width: 22px;
 }
+
+span.subheading {
+  color: #000000;
+}
+
+.el-menu-demo {
+  color: #000000;
+  font-weight: bold;
+}
+
+.org-logo {
+  width: 200px;
+  height: 200px;
+}
+
+//- not work
+.v-input__slot {
+  background-color: #5b4cb0;
+}
+
+.el-menu{
+  color: #8c6aff !important;
+  font-size: 18px !important;
+}
+
+.el-submenu__title {
+  color: #8c6aff;
+  font-size: 18px;
+}
+
+
 
 </style>
