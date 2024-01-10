@@ -10,8 +10,9 @@
           .test
             img(src="https://www.unicloud.com/upload/images/2022/1/d3de17946a411f84.png" style="margin: 0 auto; object-fit: contain")
 
+          //- 登录页面标题
           .login-title
-            .text-h6.grey--text.text--darken-4 {{ siteTitle }}
+            .text-h6.grey--text.text--darken-4(style='color: purple !important;font-weight: bold;font-size: 35px;') {{ siteTitle }}
         v-alert.mb-0(
           v-model='errorShown'
           transition='slide-y-reverse-transition'
