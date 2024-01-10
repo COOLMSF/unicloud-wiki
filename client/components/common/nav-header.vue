@@ -641,8 +641,15 @@ span.subheading {
 
 //- 搜索框颜色
 .v-input__slot {
-  background-color: #2576D1 !important;
+  background-color: #F2F2F4 !important;
 }
 
+.v-text-field__label {
+  color: black !important;
+}
+
+.v-label {
+  color: #AAAAAC !important;
+}
 
 </style>
