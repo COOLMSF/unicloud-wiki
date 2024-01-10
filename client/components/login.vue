@@ -80,7 +80,7 @@
             v-btn.mt-2.text-none(
               width='100%'
               large
-              color='purple accent-2'
+              color='#B60AAA'
               dark
               @click='login'
               :loading='isLoading'
