@@ -19,8 +19,8 @@
       )
     v-layout(row)
       v-flex(xs5, md4)
-        v-toolbar.nav-header-inner(color='black', dark, flat, :class='$vuetify.rtl ? `pr-3` : `pl-3`')
-          v-avatar(tile, size='34', @click='goHome')
+        v-toolbar.nav-header-inner(color='white', dark, flat, :class='$vuetify.rtl ? `pr-3` : `pl-3`')
+          v-avatar(tile, size='80', @click='goHome')
             // v-img.org-logo(:src='logoUrl')
             v-img.org-logo(:src='unicloudLogoUrl' contain max-witdth='200' max-width='200')
           //- v-menu(open-on-hover, offset-y, bottom, left, min-width='250', transition='slide-y-transition')
@@ -60,7 +60,6 @@
               el-menu-item(index="2-1") 快问快答
               el-menu-item(index="2-2") 服务支持中心
               el-menu-item(index="2-3") 智能AI
-
           div.line
 
 
@@ -529,6 +528,20 @@ export default {
 
 
 <style lang='scss'>
+
+span.subheading {
+  color: #000000;
+}
+
+.el-menu-demo {
+  color: #000000;
+  font-weight: bold;
+}
+
+.org-logo {
+  width: 200px;
+  height: 200px;
+}
 
 .nav-header {
   //z-index: 1000;
