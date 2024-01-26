@@ -46,19 +46,20 @@
           //-         v-list-item-title.body-2.grey--text.text--ligten-2 {{$t('common:header.imagesFiles')}}
           //-         v-list-item-subtitle.overline.grey--text.text--lighten-2 Coming soon
 
-          el-menu(
-            :default-active="activeIndex"
-            class="el-menu-demo"
-            mode="horizontal"
-            @select="handleSelect"
-          )
-            el-submenu(index="2")
-              template(slot="title") 紫谷社区
-              el-menu-item(index="2-1") 快问快答
-              el-menu-item(index="2-2") 服务支持中心
-              el-menu-item(index="2-3") 智能AI
-          div.line
 
+          <el-col :span="22">
+            <el-menu mode="horizontal" >
+              <el-menu-item index="1" @click="goToUrl('http://localhost:8080')"> 社区首页</el-menu-item>
+              <el-menu-item index="1" @click="goToUrl('http://localhost:9080')"> Quick问答</el-menu-item>
+              <el-menu-item index="2" @click="goToUrl('http://localhost:3000')"> 知识库</el-menu-item>
+              <el-menu-item index="3">服务支持中心</el-menu-item>
+              <el-menu-item index="4" @click="goToUrl('http://111.161.66.93:8501')">智能AI</el-menu-item>
+            </el-menu>
+              </el-col>
+            //- </el-row>
+
+
+          //- </el-header>
 
           //- li.layui-nav-item#dis_3
           //-   div.second_nav(style="right: 0; display: flex; justify-content: flex-end;")
@@ -418,6 +419,9 @@ export default {
     searchFocus () {
       this.searchIsFocused = true
     },
+    goToUrl(url) {
+      window.location.href = url;
+    },
     searchBlur () {
       this.searchIsFocused = false
     },
@@ -666,5 +670,12 @@ span.subheading {
 .v-label {
   color: #AAAAAC !important;
 }
+.v-toolbar__content, .v-toolbar__extension{
+padding:0px 0px !important;
+}
+.el-menu-item{
+font-size: 14px !important;
+}
+
 
 </style>
