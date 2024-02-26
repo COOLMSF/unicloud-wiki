@@ -21,9 +21,10 @@
       v-flex(xs5, md4)
         //- 左上角部分
         v-toolbar.nav-header-inner(color='white', dark, flat, :class='$vuetify.rtl ? `pr-3` : `pl-3`')
-          v-avatar(tile, size='80', @click='goHome')
+          v-avatar(tile, size='117x34', @click='goHome')
             // v-img.org-logo(:src='logoUrl')
-            v-img.org-logo(:src='unicloudLogoUrl' contain max-witdth='200' max-width='200')
+            // v-img.org-logo(:src='unicloudLogoUrl' contain max-witdth='200' max-width='200')
+            v-img.org-logo(:src='unicloudLogoUrl' size='117x34')
           //- v-menu(open-on-hover, offset-y, bottom, left, min-width='250', transition='slide-y-transition')
           //-   template(v-slot:activator='{ on }')
           //-     v-app-bar-nav-icon.btn-animate-app(v-on='on', :class='$vuetify.rtl ? `mx-0` : ``')
@@ -674,8 +675,17 @@ span.subheading {
 padding:0px 0px !important;
 }
 .el-menu-item{
-font-size: 14px !important;
+font-size: 18px !important;
+font-family: Avenir, Helvetica, Arial, sans-serif !important;
+color: black !important;
 }
 
+.el-dropdown-menu__item, .el-menu-item {
+  padding: 0 10px !important;
+}
+
+.v-application ol, .v-application ul {
+  padding-left: 10px !important;
+}
 
 </style>
